@@ -1333,6 +1333,7 @@ export arch=`arch`
 export kernel_version=`uname -r`
 export kernel_build_string=`uname -v | sed 's/SMP.*/SMP/'`
 export ssh_version=`ssh -V 2>&1 | cut -f1 -d','`
+export log_path="log/tty"
 drun 'cat ../srv/cowrie/cowrie.cfg | envsubst > /srv/cowrie/cowrie.cfg'
 
 # make output of simple text commands more real
